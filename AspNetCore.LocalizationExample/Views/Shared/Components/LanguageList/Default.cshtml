@@ -1,0 +1,21 @@
+﻿@using System.Globalization
+@using AspNetCore.LocalizationExample.Models
+@model IEnumerable<LanguageModel>
+@{
+	var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+}
+<ul>
+	@foreach (var item in Model)
+	{
+		if (item.Active)
+		{
+			<li>@item.Name</li>
+		}
+		else
+		{
+			<li>
+				<a asp-action="SetLanguage" asp-controller="Home" asp-route-culture="@item.Culture" asp-route-returnUrl="@returnUrl">@item.Name</a>
+			</li>
+		}
+	}
+</ul>

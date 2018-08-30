@@ -1,0 +1,42 @@
+﻿@model AspNetCore.LocalizationExample.Models.Home.SampleFormModel
+
+@{
+	ViewData["Title"] = @Localizer["Formulario de ejemplo"];
+}
+
+<h2>@Localizer["Formulario de ejemplo"]</h2>
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="SampleForm">
+			<div asp-validation-summary="All" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="Name" class="control-label"></label>
+				<input asp-for="Name" class="form-control" />
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Surname" class="control-label"></label>
+				<input asp-for="Surname" class="form-control" />
+				<span asp-validation-for="Surname" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="EmailAddress" class="control-label"></label>
+				<input asp-for="EmailAddress" class="form-control" />
+				<span asp-validation-for="EmailAddress" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="ConfirmEmail" class="control-label"></label>
+				<input asp-for="ConfirmEmail" class="form-control" />
+				<span asp-validation-for="ConfirmEmail" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="@Localizer["Enviar"]" class="btn btn-default" />
+			</div>
+		</form>
+	</div>
+</div>
+
+<div>
+	<a asp-action="Index">@Localizer["Volver a la página principal"]</a>
+</div>
+
