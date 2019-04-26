@@ -9,12 +9,12 @@
 	{
 		if (item.Active)
 		{
-			<li><img src="~/images/@(item.Culture).png" alt="@item.Name" /></li>
+			<li><img src="~/images/@(item.Culture).png" alt="@item.Name" width="25" height="25"/></li>
 		}
 		else
 		{
 			<li>
-				<a asp-action="SetLanguage" asp-controller="Home" asp-route-culture="@item.Culture" asp-route-returnUrl="@returnUrl"><img src="~/images/@(item.Culture).png" alt="@item.Name"/></a>
+				<a asp-action="SetLanguage" asp-controller="Home" asp-route-culture="@item.Culture" asp-route-returnUrl="@returnUrl"><img src="~/images/@(item.Culture).png" alt="@item.Name" width="25" height="25"/></a>
 			</li>
 		}
 	}
