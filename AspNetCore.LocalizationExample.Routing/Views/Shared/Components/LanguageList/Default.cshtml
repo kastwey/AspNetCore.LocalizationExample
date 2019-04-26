@@ -6,11 +6,11 @@
 {
 	if (item.Active)
 	{
-		<li>@item.Name</li>
+	    <li><img src="~/images/@(item.Culture).png" alt="@item.Name" width="25" height="25"/></li>
 	}
 	else
 	{
-		<li><a href = "@Url.Action((string)ViewContext.RouteData.Values["action"], (string)ViewContext.RouteData.Values["controller"], new { culture = item.Culture})" > @item.Name</a></li>
+		<li><a href = "@Url.Action((string)ViewContext.RouteData.Values["action"], (string)ViewContext.RouteData.Values["controller"], new { culture = item.Culture})" > <img src="~/images/@(item.Culture).png" alt="@item.Name" width="25" height="25" /></a></li>
 	}
 }
 </ul>
