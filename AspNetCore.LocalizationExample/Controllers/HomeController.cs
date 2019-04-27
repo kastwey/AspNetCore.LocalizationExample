@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using AspNetCore.LocalizationExample.Models.Home;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Http;
+using System.Globalization;
+using AspNetCore.LocalizationExample.Exceptions;
 
 namespace AspNetCore.LocalizationExample
 {
@@ -11,9 +13,16 @@ namespace AspNetCore.LocalizationExample
 
 		public IActionResult Index()
 		{
-			return View();
+			CheckAndaluz(); return View();
 		}
 
+		private void CheckAndaluz()
+		{
+			if (CultureInfo.CurrentUICulture.Name == "an-ES")
+			{
+				throw new OzuMiArmaException("¡Esa curtura no está soportá!");
+			}
+		}
 
 		public IActionResult Privacy()
 		{

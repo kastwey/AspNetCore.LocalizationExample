@@ -27,13 +27,12 @@
 	<ul>
 		<li><a asp-action="SampleForm">@SharedLocalizer["Formulario de ejemplo"]</a></li>
 	</ul>
-	<partial name="_CookieConsentPartial" />
 
 	<div class="container body-content">
 		@RenderBody()
 		<hr />
 		<footer>
-			<p>&copy; 2018 - LocalizationExample</p>
+			<p>&copy; @DateTime.Now.Year - LocalizationExample</p>
 		</footer>
 	</div>
 
