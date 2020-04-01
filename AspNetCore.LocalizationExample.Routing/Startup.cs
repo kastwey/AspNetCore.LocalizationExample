@@ -27,7 +27,7 @@ namespace AspNetCore.LocalizationExample.Routing
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			var supportedCultures = new[] { "es-ES", "en-US", "an-ES" };
+			var supportedCultures = new[] { "es-ES", "en-US" };
 			var localizationOptions = new RequestLocalizationOptions();
 			localizationOptions.AddSupportedCultures(supportedCultures)
 				.AddSupportedUICultures(supportedCultures)
