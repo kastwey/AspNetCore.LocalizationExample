@@ -117,19 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Demostración de localización en Asp.NetCore MVC" xml:space="preserve">
-    <value>Demonstration of localization in Asp.NetCore MVC</value>
+  <data name="Enviar" xml:space="preserve">
+    <value>Enviá</value>
   </data>
   <data name="Formulario de ejemplo" xml:space="preserve">
-    <value>Sample form</value>
+    <value>Formulario de ehemplo</value>
   </data>
-  <data name="Idiomas" xml:space="preserve">
-    <value>Languages</value>
-  </data>
-  <data name="Menú de navegación" xml:space="preserve">
-    <value>Navigation menu</value>
-  </data>
-  <data name="Texto proveniente de Shared resources." xml:space="preserve">
-    <value>Text from shared resources.</value>
+  <data name="Volver a la página principal" xml:space="preserve">
+    <value>Vorvé a la páhina prinsipal</value>
   </data>
 </root>
